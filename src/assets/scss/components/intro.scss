@@ -1,0 +1,92 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.intro {
+    background: $primary;
+    color: $white;
+    text-align: center;
+    padding: 110px 0;
+}
+
+.intro__action {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+
+}
+
+.intro__action-item {
+    margin-right: 110px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:first-child {
+        .intro__descrioption {
+            margin-top: 62px;
+        }
+    }
+}
+
+.intro__action-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Rubik', Sans-serif, Arial;
+
+    h4 {
+        font-size: 36px;
+        line-height: 43px;
+        margin-bottom: 4px;
+    }
+}
+
+.intro__descrioption {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Rubik', Sans-serif, Arial;
+    margin-top: 70px;
+}
+
+.intro__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    font-family: 'Rubik', Sans-serif, Arial;
+    margin-bottom: 85px;
+}
+
+.intro__price {
+    display: flex;
+    font-family: "Rubik", Sans-serif, Arial;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 60px;
+
+    .new-price {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 57px;
+        margin-left: 32px;
+    }
+}
+
+.intro__promo {
+    .intro__action-title {
+        margin-top: 45px;
+    }
+}
+
+
+// MOBILE VIEW
+
+@include breakpoint($landscape-bp) {
+    .intro__action-item {
+        margin-right: 16px;
+    }
+}

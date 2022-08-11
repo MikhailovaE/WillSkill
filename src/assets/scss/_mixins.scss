@@ -1,0 +1,17 @@
+@mixin breakpoint($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
+
+// FONTS
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik'), url(/fonts/Rubik/Rubik.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik-Italic';
+    src: local('Rubik-Italic'), url(/fonts/Rubik/Rubik-Italic.ttf);
+  }
+  

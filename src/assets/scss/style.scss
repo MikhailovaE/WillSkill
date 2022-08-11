@@ -1,0 +1,37 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+body {
+  font-family: 'Rubik',Sans-serif, Arial;
+  font-size: 14px;
+  margin: 0;
+
+//   &.no-scroll {
+//     overflow: hidden;
+//   }
+
+//   @include breakpoint($tablet-bp) {
+//     &.show-sidebar {
+//       overflow: hidden;
+//     }
+//   }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/* Blocks */
+@import "general.scss";
+@import "components/hero.scss";
+@import "components/intro.scss";
