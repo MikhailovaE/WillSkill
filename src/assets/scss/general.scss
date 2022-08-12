@@ -29,7 +29,26 @@
             height: 32px;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url(../images/Vector.svg);
+            background-image: url(../images/svg/Vector.svg);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $secondary-orange;
+            left: 20px;
+            top: 22px;
+            color: $black;
+            font-size: 8px;
+            padding-left: 3px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 24px;
         }
     }
 
@@ -50,6 +69,15 @@
         font-family: "Rubik", Sans-serif, Arial;
         color: $white;
     }
+
+    @include breakpoint($tablet-bp) {
+        justify-content: space-between;
+
+        nav,
+        .header__basket {
+            display: none;
+        }
+    }
 }
 
 .container {
@@ -69,7 +97,19 @@
 .text-strikeout {
     text-decoration: line-through;
     color: $gray;
+}
 
+a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Rubik", Sans-serif, Arial;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 // btn
@@ -84,10 +124,10 @@
 
     &:hover {
         background: $secondary;
-      }
-    
-      &:active,
-      &:focus {
+    }
+
+    &:active,
+    &:focus {
         outline: 1px solid $gray;
-      }
+    }
 }

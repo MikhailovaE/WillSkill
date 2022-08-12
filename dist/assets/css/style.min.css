@@ -1,1 +1,448 @@
-body{font-family:Rubik,Sans-serif,Arial;font-size:14px;margin:0}*,:after,:before{box-sizing:border-box}.hidden{display:none!important}.visible{visibility:visible}.main{display:-ms-flexbox;display:flex;font-family:Rubik,Sans-serif,Arial}#header{background-color:#111}.header{display:-ms-flexbox;display:flex;padding:20px;margin:0;height:80px;-ms-flex-pack:distribute;justify-content:space-around}.header .header__basket{position:relative}.header .header__basket:before{content:"";position:absolute;background-repeat:no-repeat;background-size:contain;width:32px;height:32px;top:50%;transform:translateY(-50%);background-image:url(../images/Vector.svg)}.header .navigation{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.header .navigation__item{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;list-style:none;padding:0 20px;font-weight:400;font-size:18px;line-height:24px;position:relative;font-family:Rubik,Sans-serif,Arial;color:#fff}.container{width:100%;max-width:1280px;margin:0 auto;padding:0 20px;overflow:hidden}.text-highlighted{color:#fcb500}.text-strikeout{text-decoration:line-through;color:#adadad}.btn{background:#fcb500;border-radius:7px;padding:16px 32px;font-weight:400;font-size:18px;line-height:21px;font-family:Rubik,Sans-serif,Arial}.btn:hover{background:#fcda28}.btn:active,.btn:focus{outline:1px solid #adadad}.hero{background:#fcda28;height:872px;position:relative}.hero__wrap{display:-ms-flexbox;display:flex;position:relative}.hero__content{z-index:1;width:43%;margin-top:100px}.hero__content .hero__title{font-weight:700;font-size:144px;line-height:152px;color:#fff;margin-bottom:24px;font-family:Rubik,Sans-serif,Arial}.hero__content .hero__title-description{font-weight:400;font-size:24px;line-height:28px;margin-bottom:120px;font-family:Rubik,Sans-serif,Arial}.hero__content .hero__subtitle{font-weight:700;font-size:36px;line-height:43px;margin-bottom:16px;font-family:Rubik,Sans-serif,Arial}.hero__content .hero__subtitle-description{font-weight:400;font-size:18px;line-height:21px;font-family:Rubik,Sans-serif,Arial}.hero__background{top:0;right:0}@font-face{font-family:Rubik;src:local("Rubik"),url(/fonts/Rubik/Rubik.ttf)}.intro{background:#111;color:#fff;text-align:center;padding:110px 0}.intro__action{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;margin-bottom:64px}.intro__action-item{margin-right:110px}.intro__action-item:last-child{margin-right:0}.intro__action-item:first-child .intro__descrioption{margin-top:62px}.intro__action-title{font-weight:400;font-size:18px;line-height:21px;font-family:Rubik,Sans-serif,Arial}.intro__action-title h4{font-size:36px;line-height:43px;margin-bottom:4px}.intro__descrioption{font-weight:400;font-size:18px;line-height:21px;font-family:Rubik,Sans-serif,Arial;margin-top:70px}.intro__title{font-weight:700;font-size:48px;line-height:57px;margin-bottom:85px}.intro__price,.intro__title{font-family:Rubik,Sans-serif,Arial}.intro__price{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;font-weight:400;font-size:36px;line-height:43px;margin-bottom:60px}.intro__price .new-price{font-weight:400;font-size:48px;line-height:57px;margin-left:32px}.intro__promo .intro__action-title{margin-top:45px}@media screen and (max-width:1200px){.intro__action-item{margin-right:16px}}
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"), url(/fonts/Rubik/Rubik.ttf);
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: local("Rubik-Italic"), url(/fonts/Rubik/Rubik-Italic.ttf);
+}
+body {
+  font-family: "Rubik", Sans-serif, Arial;
+  font-size: 14px;
+  margin: 0;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+@media screen and (max-width: 900px) {
+  body.show-sidebar {
+    overflow: hidden;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/* Blocks */
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"), url(/fonts/Rubik/Rubik.ttf);
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: local("Rubik-Italic"), url(/fonts/Rubik/Rubik-Italic.ttf);
+}
+.main {
+  display: flex;
+  font-family: "Rubik", Sans-serif, Arial;
+}
+
+#header {
+  background-color: #111111;
+}
+
+.header {
+  display: flex;
+  padding: 20px;
+  margin: 0;
+  height: 80px;
+  justify-content: space-around;
+}
+.header .header__basket {
+  position: relative;
+}
+.header .header__basket::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(../images/svg/Vector.svg);
+}
+.header .header__basket::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FCB500;
+  left: 20px;
+  top: 22px;
+  color: #000;
+  font-size: 8px;
+  padding-left: 3px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+}
+.header .navigation {
+  display: flex;
+  align-items: center;
+}
+.header .navigation__item {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  font-family: "Rubik", Sans-serif, Arial;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header nav,
+.header .header__basket {
+    display: none;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.text-highlighted {
+  color: #FCB500;
+}
+
+.text-strikeout {
+  text-decoration: line-through;
+  color: #ADADAD;
+}
+
+a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Rubik", Sans-serif, Arial;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background: #FCB500;
+  border-radius: 7px;
+  padding: 16px 32px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Rubik", Sans-serif, Arial;
+}
+.btn:hover {
+  background: #FCDA28;
+}
+.btn:active, .btn:focus {
+  outline: 1px solid #ADADAD;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"), url(/fonts/Rubik/Rubik.ttf);
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: local("Rubik-Italic"), url(/fonts/Rubik/Rubik-Italic.ttf);
+}
+.hero {
+  background: #FCDA28;
+  height: 872px;
+  position: relative;
+}
+
+.hero__wrap {
+  display: flex;
+  position: relative;
+}
+
+.hero__content {
+  z-index: 1;
+  width: 43%;
+  margin-top: 100px;
+}
+.hero__content .hero__title {
+  font-weight: 700;
+  font-size: 144px;
+  line-height: 152px;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+  font-family: "Rubik", Sans-serif, Arial;
+}
+.hero__content .hero__title-description {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 120px;
+  font-family: "Rubik", Sans-serif, Arial;
+}
+.hero__content .hero__subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 16px;
+  font-family: "Rubik", Sans-serif, Arial;
+}
+.hero__content .hero__subtitle-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Rubik", Sans-serif, Arial;
+}
+
+.hero__background {
+  top: 0;
+  right: 0;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"), url(/fonts/Rubik/Rubik.ttf);
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: local("Rubik-Italic"), url(/fonts/Rubik/Rubik-Italic.ttf);
+}
+.intro {
+  background: #111111;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 110px 0;
+}
+
+.intro__action {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.intro__action-item {
+  margin-right: 110px;
+}
+.intro__action-item:last-child {
+  margin-right: 0;
+}
+.intro__action-item:first-child .intro__descrioption {
+  margin-top: 62px;
+}
+
+.intro__action-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Rubik", Sans-serif, Arial;
+}
+.intro__action-title h4 {
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 4px;
+}
+
+.intro__descrioption {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Rubik", Sans-serif, Arial;
+  margin-top: 70px;
+}
+
+.intro__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  font-family: "Rubik", Sans-serif, Arial;
+  margin-bottom: 85px;
+}
+
+.intro__price {
+  display: flex;
+  font-family: "Rubik", Sans-serif, Arial;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 60px;
+}
+.intro__price .new-price {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 57px;
+  margin-left: 32px;
+}
+
+.intro__promo .intro__action-title {
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 1200px) {
+  .intro__action-item {
+    margin-right: 16px;
+  }
+}
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"), url(/fonts/Rubik/Rubik.ttf);
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: local("Rubik-Italic"), url(/fonts/Rubik/Rubik-Italic.ttf);
+}
+.burger {
+  display: none;
+}
+.burger.burger-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.burger.burger-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  background: #72727E;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.burger.burger-icon span:nth-child(1) {
+  top: 6px;
+  left: 3px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.burger.burger-icon span:nth-child(2) {
+  top: 12px;
+  left: 3px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.burger.burger-icon span:nth-child(3) {
+  top: 18px;
+  left: 3px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.burger.burger-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 3px;
+  left: -3px;
+}
+.burger.burger-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.burger.burger-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 16px;
+  left: -3px;
+}
+@media screen and (max-width: 900px) {
+  .burger {
+    display: block;
+  }
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"), url(/fonts/Rubik/Rubik.ttf);
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: local("Rubik-Italic"), url(/fonts/Rubik/Rubik-Italic.ttf);
+}
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #111111;
+    display: none;
+    flex-direction: column;
+    height: calc(100vh - 4rem);
+    padding-bottom: 1.5rem;
+    overflow: auto;
+    top: 4rem;
+    transform: translateX(-100%);
+    transition: transform 0.2s linear;
+    z-index: 100;
+    border-top: 1px solid #ADADAD;
+  }
+  .show-sidebar .sidebar {
+    transform: translateX(0);
+    display: flex;
+  }
+  .sidebar .action {
+    float: none;
+    display: block;
+  }
+  .sidebar .action__items {
+    display: block;
+    margin-right: 0;
+  }
+  .sidebar .action__items li {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid #ADADAD;
+  }
+  .sidebar .action__items li a {
+    margin: 0 auto;
+  }
+}

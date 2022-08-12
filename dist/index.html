@@ -16,16 +16,23 @@
         <div class="container">
             <div class="header">
                 <a class="header__logo">
-                    <img src="assets/images/logo.png">
+                    <img src="../assets/images/logo.png">
                 </a>
-                <ul class="navigation">
-                    <li class="navigation__item"><a>FAQ</a></li>
-                    <li class="navigation__item"><a>Оплата и доставка</a></li>
-                    <li class="navigation__item"><a>Возврат</a></li>
-                    <li class="navigation__item"><a>Личный кабинет</a></li>
-                    <li class="navigation__item"><a>8 8 (800) 600-09-90</a></li>
-                </ul>
-                <a class="header__basket"></a>
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation__item"><a href="javascript;:">FAQ</a></li>
+                        <li class="navigation__item"><a href="javascript;:">Оплата и доставка</a></li>
+                        <li class="navigation__item"><a href="javascript;:">Возврат</a></li>
+                        <li class="navigation__item"><a href="javascript;:">Личный кабинет</a></li>
+                        <li class="navigation__item"><a href="javascript;:">8 8 (800) 600-09-90</a></li>
+                    </ul>  
+                </nav>
+                <a class="header__basket" href="javascript;:"></a>
+                <div class="burger burger-icon" type="button" id="sidebarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>    <div class="hero">
@@ -42,7 +49,7 @@
                         и сезонных простуд</p>
                 </div>
                 <div class="hero__background">
-                    <img src="assets/images/group.png"/>
+                    <img src="../../assets/images/group.png"/>
                 </div>
             </div>
         </div>
@@ -56,13 +63,13 @@
         </div>
         <div class="intro__action">
             <div class="intro__action-item">
-                <img src="assets/images/ginger.png" alt="">
+                <img src="../../assets/images/ginger.png" alt="">
                 <p class="intro__descrioption">Содержит <br />
                     <span class="text-highlighted">имбирь</span>
                 </p>
             </div>
             <div class="intro__action-item intro__promo">
-                <img src="assets/images/nootris.png" alt="">
+                <img src="../../assets/images/nootris.png" alt="">
     
                 <div class="intro__action-title">
                     <h4>+ Бесплатная доставка</h4>
@@ -70,13 +77,28 @@
                 </div>
             </div>
             <div class="intro__action-item">
-                <img src="assets/images/vorus.png" alt="">
+                <img src="../../assets/images/vorus.png" alt="">
                 <p class="intro__descrioption">Нейтрализует <br />
                     <span class="text-highlighted">вирусы</span>
                 </p>
             </div>
         </div>
         <button class="btn">Оформить заказ!</button>
-    </div></body>
+    </div>    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="action">
+            <ul class="action__items">
+                <li class="navigation__item"><a href="javascript;:">FAQ</a></li>
+                <li class="navigation__item"><a href="javascript;:">Оплата и доставка</a></li>
+                <li class="navigation__item"><a href="javascript;:">Возврат</a></li>
+                <li class="navigation__item"><a href="javascript;:">Личный кабинет</a></li>
+                <li class="navigation__item"><a href="javascript;:">8 8 (800) 600-09-90</a></li>
+                <li class="navigation__item"><a class="header__basket" href="javascript;:">Корзина</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <script src="assets/js/app.js"></script>
+
+</body>
 
 </html>
