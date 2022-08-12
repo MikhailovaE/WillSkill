@@ -566,6 +566,7 @@ a:hover {
   .sidebar .action__items {
     display: block;
     margin-right: 0;
+    padding-left: 0;
   }
   .sidebar .action__items li {
     margin: 0;
