@@ -5,6 +5,15 @@
     background: $secondary;
     height: 872px;
     position: relative;
+
+    @include breakpoint($landscape-bp) {
+        height: 650px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        height: 750px;
+
+    }
 }
 
 // .hero__header-bg {
@@ -15,6 +24,11 @@
 .hero__wrap {
     display: flex;
     position: relative;
+
+    @include breakpoint($mobile-bp) {
+
+        flex-direction: column;
+    }
 }
 
 .hero__content {
@@ -58,11 +72,73 @@
         font-family: 'Rubik', Sans-serif, Arial;
 
     }
+
+    @include breakpoint($landscape-bp) {
+        margin-top: 30px;
+
+        .hero__title {
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 100px;
+        }
+
+        .hero__title-description {
+            margin-bottom: 60px;
+        }
+    }
+
+    @include breakpoint($mobile-bp) {
+        width: 100%;
+        margin-top: 16px;
+
+
+        .hero__title {
+            font-weight: 700;
+            font-size: 80px;
+            line-height: 80px;
+            margin-bottom: 16px;
+
+        }
+
+        .hero__title-description {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 30px;
+
+        }
+
+        .hero__subtitle {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 8px;
+        }
+
+        .hero__subtitle-description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
 }
 
 .hero__background {
-    // position: absolute;
     top: 0;
     right: 0;
 
+    @include breakpoint($landscape-bp) {
+        img {
+            width: 130%;
+        }
+    }
+
+    @include breakpoint($mobile-bp) {
+        img {
+            width: 61%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }

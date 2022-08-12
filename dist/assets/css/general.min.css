@@ -70,11 +70,16 @@
   font-family: "Rubik", Sans-serif, Arial;
   color: #FFFFFF;
 }
+@media screen and (max-width: 1200px) {
+  .header .navigation__item {
+    padding: 0 10px;
+  }
+}
 @media screen and (max-width: 900px) {
   .header {
     justify-content: space-between;
   }
-  .header nav,
+  .header .navigation,
 .header .header__basket {
     display: none;
   }

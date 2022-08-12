@@ -8,11 +8,36 @@
     padding: 110px 0;
 }
 
+.intro__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    font-family: 'Rubik', Sans-serif, Arial;
+    margin-bottom: 85px;
+}
+
+.intro__price {
+    display: flex;
+    font-family: "Rubik", Sans-serif, Arial;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 60px;
+
+    .new-price {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 57px;
+        margin-left: 32px;
+    }
+}
+
 .intro__action {
     display: flex;
     justify-content: center;
     margin-bottom: 64px;
-
 }
 
 .intro__action-item {
@@ -50,43 +75,63 @@
     margin-top: 70px;
 }
 
-.intro__title {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 57px;
-    font-family: 'Rubik', Sans-serif, Arial;
-    margin-bottom: 85px;
-}
-
-.intro__price {
-    display: flex;
-    font-family: "Rubik", Sans-serif, Arial;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 43px;
-    margin-bottom: 60px;
-
-    .new-price {
-        font-weight: 400;
-        font-size: 48px;
-        line-height: 57px;
-        margin-left: 32px;
-    }
-}
-
 .intro__promo {
     .intro__action-title {
         margin-top: 45px;
     }
 }
 
+.d-view {
+    display: block;
+}
+
+.m-view {
+    display: none;
+}
 
 // MOBILE VIEW
 
 @include breakpoint($landscape-bp) {
     .intro__action-item {
-        margin-right: 16px;
+        margin-right: 8px;
+    }
+}
+
+@include breakpoint($tablet-bp) {
+
+    .intro__action {
+        flex-direction: column;
+
+        .d-view {
+            display: none;
+        }
+
+        .m-view {
+            display: block;
+        }
+    }
+
+
+    .intro__title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+
+    .intro__price {
+        font-size: 24px;
+        line-height: 43px;
+        margin-bottom: 24px;
+
+        .new-price {
+            font-size: 32px;
+            line-height: 50px;
+            margin-left: 16px;
+        }
+    }
+
+    .intro__descrioption {
+        margin-top: 24px !important;
+        margin-bottom: 24px;
     }
 }

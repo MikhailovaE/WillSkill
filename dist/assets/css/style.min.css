@@ -107,11 +107,16 @@ body.no-scroll {
   font-family: "Rubik", Sans-serif, Arial;
   color: #FFFFFF;
 }
+@media screen and (max-width: 1200px) {
+  .header .navigation__item {
+    padding: 0 10px;
+  }
+}
 @media screen and (max-width: 900px) {
   .header {
     justify-content: space-between;
   }
-  .header nav,
+  .header .navigation,
 .header .header__basket {
     display: none;
   }
@@ -175,10 +180,25 @@ a:hover {
   height: 872px;
   position: relative;
 }
+@media screen and (max-width: 1200px) {
+  .hero {
+    height: 650px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 750px;
+  }
+}
 
 .hero__wrap {
   display: flex;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .hero__wrap {
+    flex-direction: column;
+  }
 }
 
 .hero__content {
@@ -214,10 +234,65 @@ a:hover {
   line-height: 21px;
   font-family: "Rubik", Sans-serif, Arial;
 }
+@media screen and (max-width: 1200px) {
+  .hero__content {
+    margin-top: 30px;
+  }
+  .hero__content .hero__title {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .hero__content .hero__title-description {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__content {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .hero__content .hero__title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+  .hero__content .hero__title-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  .hero__content .hero__subtitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+  .hero__content .hero__subtitle-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 
 .hero__background {
   top: 0;
   right: 0;
+}
+@media screen and (max-width: 1200px) {
+  .hero__background img {
+    width: 130%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__background img {
+    width: 61%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @font-face {
@@ -233,6 +308,31 @@ a:hover {
   color: #FFFFFF;
   text-align: center;
   padding: 110px 0;
+}
+
+.intro__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  font-family: "Rubik", Sans-serif, Arial;
+  margin-bottom: 85px;
+}
+
+.intro__price {
+  display: flex;
+  font-family: "Rubik", Sans-serif, Arial;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 60px;
+}
+.intro__price .new-price {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 57px;
+  margin-left: 32px;
 }
 
 .intro__action {
@@ -271,38 +371,51 @@ a:hover {
   margin-top: 70px;
 }
 
-.intro__title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 57px;
-  font-family: "Rubik", Sans-serif, Arial;
-  margin-bottom: 85px;
-}
-
-.intro__price {
-  display: flex;
-  font-family: "Rubik", Sans-serif, Arial;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 43px;
-  margin-bottom: 60px;
-}
-.intro__price .new-price {
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 57px;
-  margin-left: 32px;
-}
-
 .intro__promo .intro__action-title {
   margin-top: 45px;
 }
 
+.d-view {
+  display: block;
+}
+
+.m-view {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .intro__action-item {
-    margin-right: 16px;
+    margin-right: 8px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .intro__action {
+    flex-direction: column;
+  }
+  .intro__action .d-view {
+    display: none;
+  }
+  .intro__action .m-view {
+    display: block;
+  }
+  .intro__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+  .intro__price {
+    font-size: 24px;
+    line-height: 43px;
+    margin-bottom: 24px;
+  }
+  .intro__price .new-price {
+    font-size: 32px;
+    line-height: 50px;
+    margin-left: 16px;
+  }
+  .intro__descrioption {
+    margin-top: 24px !important;
+    margin-bottom: 24px;
   }
 }
 @font-face {
@@ -405,6 +518,9 @@ a:hover {
 @font-face {
   font-family: "Rubik-Italic";
   src: local("Rubik-Italic"), url(/fonts/Rubik/Rubik-Italic.ttf);
+}
+.sidebar {
+  display: none;
 }
 @media screen and (max-width: 900px) {
   .sidebar {

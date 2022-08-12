@@ -70,10 +70,16 @@
         color: $white;
     }
 
+    @include breakpoint($landscape-bp) {
+        .navigation__item {
+            padding: 0 10px;
+        }
+    }
+
     @include breakpoint($tablet-bp) {
         justify-content: space-between;
 
-        nav,
+        .navigation,
         .header__basket {
             display: none;
         }
