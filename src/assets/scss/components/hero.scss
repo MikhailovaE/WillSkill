@@ -94,8 +94,8 @@
 
         .hero__title {
             font-weight: 700;
-            font-size: 80px;
-            line-height: 80px;
+            font-size: 70px;
+            line-height: 60px;
             margin-bottom: 16px;
 
         }
@@ -121,6 +121,15 @@
             line-height: 18px;
         }
     }
+
+    @include breakpoint(600px) {
+        .hero__title {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
 }
 
 .hero__background {
@@ -135,10 +144,11 @@
 
     @include breakpoint($mobile-bp) {
         img {
-            width: 61%;
+            width: 350px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            margin-top: -50px;
         }
     }
 }

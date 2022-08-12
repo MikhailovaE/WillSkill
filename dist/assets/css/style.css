@@ -296,8 +296,8 @@ a:hover {
 
     .hero__content .hero__title {
         font-weight: 700;
-        font-size: 80px;
-        line-height: 80px;
+        font-size: 70px;
+        line-height: 60px;
         margin-bottom: 16px;
     }
 
@@ -322,6 +322,14 @@ a:hover {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .hero__content .hero__title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
 .hero__background {
     top: 0;
     right: 0;
@@ -335,10 +343,11 @@ a:hover {
 
 @media screen and (max-width: 768px) {
     .hero__background img {
-        width: 61%;
+        width: 350px;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-top: -50px;
     }
 }
 
@@ -431,6 +440,12 @@ a:hover {
 
 .intro__promo .intro__action-title {
     margin-top: 45px;
+}
+
+@media screen and (max-width: 500px) {
+    .intro__promo img {
+        width: 100%;
+    }
 }
 
 .d-view {

@@ -79,6 +79,12 @@
     .intro__action-title {
         margin-top: 45px;
     }
+
+    @include breakpoint(500px) {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .d-view {
