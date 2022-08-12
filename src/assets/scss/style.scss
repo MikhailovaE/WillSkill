@@ -8,11 +8,13 @@ body {
 
   &.no-scroll {
     overflow: hidden;
+    position: fixed;
   }
 
   @include breakpoint($tablet-bp) {
     &.show-sidebar {
       overflow: hidden;
+      position: fixed;
     }
   }
 }
