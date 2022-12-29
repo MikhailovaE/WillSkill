@@ -339,7 +339,7 @@ a:hover {
 
 @media screen and (max-width: 1200px) {
     .hero__background img {
-        width: 130%;
+        width: 100%;
     }
 }
 
