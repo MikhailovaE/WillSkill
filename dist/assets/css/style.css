@@ -22,6 +22,7 @@ body.no-scroll {
 @media screen and (max-width: 900px) {
     body.show-sidebar {
         overflow: hidden;
+        position: fixed;
     }
 }
 
@@ -449,14 +450,6 @@ a:hover {
     }
 }
 
-.d-view {
-    display: block;
-}
-
-.m-view {
-    display: none;
-}
-
 @media screen and (max-width: 1200px) {
     .intro__action-item {
         margin-right: 8px;
@@ -469,12 +462,9 @@ a:hover {
         flex-direction: column;
     }
 
-    .intro__action .d-view {
-        display: none;
-    }
-
-    .intro__action .m-view {
-        display: block;
+    .intro__action .intro__promo {
+        -ms-flex-order: 1;
+        order: 1;
     }
 
     .intro__title {
@@ -637,6 +627,7 @@ a:hover {
     .sidebar .action__items {
         display: block;
         margin-right: 0;
+        padding-left: 0;
     }
 
     .sidebar .action__items li {

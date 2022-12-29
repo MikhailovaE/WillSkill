@@ -87,14 +87,6 @@
     }
 }
 
-.d-view {
-    display: block;
-}
-
-.m-view {
-    display: none;
-}
-
 // MOBILE VIEW
 
 @include breakpoint($landscape-bp) {
@@ -108,12 +100,8 @@
     .intro__action {
         flex-direction: column;
 
-        .d-view {
-            display: none;
-        }
-
-        .m-view {
-            display: block;
+        .intro__promo {
+            order: 1;
         }
     }
 
